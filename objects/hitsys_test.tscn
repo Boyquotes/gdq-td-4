@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://dbnv11rskq82q"]
+
+[ext_resource type="PackedScene" uid="uid://dn3j4mpt2vvad" path="res://objects/hurtbox/hurt_box_area2d.tscn" id="1_5kpnm"]
+[ext_resource type="PackedScene" uid="uid://d2v1ryjuaey5m" path="res://objects/hitbox/hit_box_area2d.tscn" id="2_nfren"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5ox4w"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ey8u6"]
+
+[node name="HitsysTest" type="Node2D"]
+
+[node name="hurt_box_area2d" parent="." instance=ExtResource("1_5kpnm")]
+position = Vector2(-14, 0)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hurt_box_area2d"]
+shape = SubResource("CircleShape2D_5ox4w")
+
+[node name="hit_box_area2d" parent="." instance=ExtResource("2_nfren")]
+team = 1
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hit_box_area2d"]
+shape = SubResource("CircleShape2D_ey8u6")
