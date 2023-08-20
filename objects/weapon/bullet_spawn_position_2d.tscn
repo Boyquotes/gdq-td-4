@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://88kdie00fpga"]
+
+[node name="BulletSpawnPosition2D" type="Marker2D"]
